@@ -1,0 +1,140 @@
+<html>
+    <head>
+    <title>데이터타입(String,Number,Object,Array,Underined,Null)</title>
+</head>
+<body>
+    <script>
+        // String 문자열 (쌍따옴표, 외따옴표 구분 X)
+        let name1 = "홍길동";
+        let name2 = "홍길순";
+        // let str1 = "저의 이름은 "홍길동" 입니다."; // 에러 발생
+        // let str1 = "저의 이름은 '홍길동' 입니다."; // 정상적으로 실행, 쌍따옴표 외따옴표를 섞어서 사용할 땐 밖을 쌍, 안을 외따옴표 하기
+        // console.log(str1);
+
+        // let str2 = "저의 이름은 \"홍길동\" 입니다."; // // 의미 : 다음에 나오는 것은 문자로 처리하기
+        // let str3 = "저의 이름은 \'홍길동\' 입니다.";
+        // console.log(str2);
+        // console.log(str3);
+
+        // let str4 = "저의 이름은 \홍길동\ 입니다."; // 정상적으로 실행되나, 출력값은 없다.
+        // console.log(str4);
+
+        // let str5 = "저의 이름은 \\홍길동\\ 입니다."; // 정상적으로 실행되나, 출력값은 없다.
+        // console.log(str5);
+
+        // Number
+        // let x = 3;
+        // let y = 3.14;
+
+        // undefined
+        // let u1; // 변수 선언 O, 초기화 x => undefined
+        // console.log(u1);
+
+        // let u2 = "undefined";
+        // console.log(u2); // undefined으로 초기화해도 상관 X
+
+        // Null : 존재하지 않는 값
+        // let n1 = null;
+        // console.log(n1);
+
+        // Object ,js는 객체도 하나의 object로 봄
+        let person1 = {};
+        person1.firstName = "길동"; // firstName : 멤버변수
+        person1.lastName = "홍";
+        person1.age = 23; // 방법1
+
+        // Object 선언과 동시에 멤버변수 초기화
+        let person2 = {
+            fristName : "길순",
+            lastName : "홍",
+            age : 10
+        }; // 방법2
+
+        let person3 = {};
+        person3["fristName"] = "철수";
+        person3["lastName"] = "김";
+        person3["age"] = 20; // 방법3
+
+        person2.email = "Hong@gmail.com";
+
+        // console.log(person1.firstName);
+        // console.log(person1.lastName);
+        // console.log(person1.age);
+
+        // document.write(person1.firstName + "<br>");
+        // document.write(person1.lastName + "<br>");
+        // document.write(person1.age + "<br>");
+
+        // console.log(person2.firstName);
+        // console.log(person2.lastName);
+        // console.log(person2.age);
+        // console.log(person2.email);
+
+        // 배열 - Array, js는 배열을 객체로 처리함
+        // let car = ["현대", "기아", "볼보", "테슬라", "벤츠"]; // 배열 선언 및 초기화
+        // console.log(car[0]);
+        // console.log(car[1]);
+        // console.log(car[2]);
+        // console.log(car[3]);
+        // console.log(car[4]);
+
+        let num = [3, 7, 2, 9, 12];
+        console.log(num[2]);
+        console.log(num[4]);
+        console.log(num[5]); // ex) 2학년 7반 반장
+
+        // let arr1 = ["현대", 3, undefined, null];
+        // console.log(arr1[0]);
+        // console.log(arr1[1]);
+        // console.log(arr1[2]); // js에선 undefined를 하나의 요소로 처리
+        // console.log(arr1[3]); // js에선 null를 하나의 요소로 처리
+
+        // let arr2 = [person1, person2, person3];
+        // console.log(arr2[0]);
+        // console.log(arr2[1]);
+        // console.log(arr2[2]);
+
+        // let arr3 = []; // 초기화 하지 않아도 선언 가능함
+        // arr3[0] = 1;
+        // arr3[1] = "대한민국";
+        // console.log(arr3[0]);
+        // console.log(arr3[1]);
+
+        // 배열에 push 메서드를 이용해서 순차적으로 삽입
+        // let arr4 = [];
+        // arr4.push(2023);
+        // arr4.push("BTS");
+        // arr4.pop(7);
+        // arr4.pop(3);
+        // arr4.pop(3.14);
+        // arr4.pop(null);
+        // arr4.pop(undefined);
+
+        // console.log(arr4[0]);
+        // console.log(arr4[1]);
+        // console.log(arr4[2]);
+        // console.log(arr4[3]);
+        // console.log(arr4[4]);
+        // console.log(arr4[5]);
+        // console.log(arr4[6]);
+
+        // for(var i=0; i<arr4.length; i++) {
+        //     console.log(arr4[i]);
+        //     document.write(arr4[i] + "<br>");   
+        // } // for
+
+        // Boolean 참/거짓 : true or false, js에서 boolean타입 다룸
+        let isAult = false; // isAdult - true
+        // let num1 = 5;
+        // let num2 = 7;
+        // console.log(num1 < num2); // true
+
+        console.log(typeof num);
+        console.log(typeof isAdult);
+        console.log(typeof name1);
+        console.log(typeof person1);
+        console.log(typeof arr1);
+        
+    </script>
+</body>
+</html>
