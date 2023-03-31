@@ -54,10 +54,37 @@
         // console.log(person.lastName); // 홍
         // console.log(person.age); // 37
 
-        for(var key in person) { // person 객체를 찾아가 key 값을 찍음
-            console.log(key);
-            console.log(person[key]);
-        }
+        // for(var key in person) { // person 객체를 찾아가 key 값을 찍음
+        //     // console.log(key);
+        //     console.log(person[key]);
+        // }
+
+        // var cars = ["현대", "기아", "볼보", "벤츠"];
+        // for(var car in cars)  { // index값만 뽑아올 때
+        //     console.log(car);
+        // }
+
+        // for(var car of cars) { 
+        //     console.log(car);
+        // }
+
+        // while문, 한 번도 실행이 안될수도 있음
+        // var i = 10;
+        // var total = 0;
+        // while(i <= 10) {
+        //     total += i;
+        //     i++;
+        // }
+        // console.log(total);
+
+        // do while문, 무조건 한 번은 실행
+        var i = 1;
+        var total = 0;
+        do {
+            total += i;
+            i++;
+        } while(i <= 10)
+        console.log(total);
 
     </script>
 </body>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+    <title>Quiz-02(삼각형 판별하기)</title>
+    <!--
+    문제 : 길이가 서로 다른 A, B, C 세 개의 막대 길이가 주어지면 이 세 막대로 삼각형을 만들 수 있으면 'YES'를 출력하고, 만들 수 없으면 'NO'를 출력한다. 
+    - 삼각형 : 짧은 길이의 두 막대 길이의 합이, 가장 긴 막대의 길이보다 커야 한다.
+    - 정렬이나 , 배열 사용 금지, if문만 사용
+
+    입력 : 100이하의 서로 다른 A, B, C 막대의 길이가 주어진다.
+    출력 : "YES" 또는 "NO"를 출력한다.
+
+    입력예시1 : 6 7 11
+    출력예시1 : YES
+    입력예시2 : 13 33 17
+    출력예시2 : NO
+    -->
+</head>
+<body>
+    <script>
+        function solution(a, b, c) {
+            let answer = a + b + c;
+    
+            // insert Code
+            let max = 0;
+
+            if(a < b) max = b;
+            else max = a;
+
+            if(max < c) max = c;
+
+            if(answer-max > max) answer = "YES";
+            else answer = "NO";
+
+            return answer;
+        }
+        console.log(solution(6, 7, 11)); // 출력값 : YES
+        console.log(solution(13, 33, 17)); // 출력값 : NO
+    </script>
+</body>
+</html>
