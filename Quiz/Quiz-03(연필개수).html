@@ -1,0 +1,52 @@
+<html>
+    <head>
+    <title>연필 개수</title>
+    <!--
+    문제 : 연필 1 다스는 12자루입니다. 학생 1인당 연필을 1자루씩 나누어 준다고 할 때 N명의 학생수를 입력하면 필요한 연필의 다수 수를 계산하는 프로그램을 작성하세요.
+    
+    입력 : 1000 이하의 자연수를 입력받는다.
+    출력 : 필요한 다수 수를 출력한다.
+
+    입력예시1 : 25
+    출력예시1 : 3
+    입력예시2 : 178
+    출력예시2 : 15
+
+    -->
+</head>
+<body>
+    <script>
+        function solution(n) {
+            let answer;
+            
+            // insert Code
+            if(n/12 != 0)
+                answer = n/12;
+            else
+                answer = n/12+1;
+
+            /* 규정T 풀이
+            let answer = Math.ceil(n/12);
+            return answer; */
+
+            return answer;
+
+        } // function
+
+        console.log(solution(25));
+        console.log(solution(178));
+
+        /*
+        // ceil() : 무조건 올림
+        console.log(Math.ceil(2.1)); // 3
+
+        // floor() : 무조건 내림
+        console.log(Math.floor(2.9)); // 2
+
+        // round() : 반올림
+        console.log(Math.round(2.9)); // 3
+        console.log(Math.round(2.1)); // 2
+        */
+    </script>
+</body>
+</html>

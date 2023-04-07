@@ -41,8 +41,69 @@
         // console.log(jumin1.substr(2, 2)); // 07(월), 2번 인덱스부터 두 글자
         // console.log(jumin1.substr(4, 2)); // 13(일), 4번 인덱스부터 두 글자
 
-        var jumin2 = "2006-07-13"; // var jumin2="06-07-13" 등 다양한 경우 존재
-        console.log(jumin2.substring(0, jumin2.indexOf("-"))); // indexOf : 4, substring : 0, 4-1 / -의 위치값을 찾아 -로 구분
+        // var jumin2 = "2006-07-13"; // var jumin2="06-07-13" 등 다양한 경우 존재
+        // console.log(jumin2.substring(0, jumin2.indexOf("-"))); // 출력 : 2006, indexOf : 4, substring : 0, 4-1 / -의 위치값을 찾아 -로 구분
+
+        // replace : 교체
+        // var str1 = "please visit here";
+        // var str2 = str1.replace("here", "there"); // here을 there으로 바꿈 
+        // console.log(str2);
+
+        // var str3 = "please visit here here here";
+        // var str4 = str3.replace("here", "there"); // please visit there here here -> 가장 먼저 탐색하는 것 하나만 바꿈
+        // console.log(str4);
+
+        // 정규 표현식
+        // var str5 = "please visit here here here";
+        // var str6 = str5.replace(/here/g, "there"); // 모든 here을 there으로 변경, g : global
+        // console.log(str6);
+
+        // var str7 = "please visit here HERE Here";
+        // var str8 = str7.replace(/here/gi, "there"); // i : ignore(대소문자 무시), js는 대소문자 구분
+        // console.log(str8);
+
+        // 대문자로 변환
+        // var str9 = "please visit here HERE Here";
+        // console.log(str9.toUpperCase());
+        // console.log(str9.toLowerCase());
+
+        // 데이터베이스 : John, JOHN, john
+        // var txt1 = "Hello";
+        // var txt2 = "World";
+        // var txt3 = txt1 + " " + txt2; // + : 연결(문자열이기 때문에)
+        // console.log(txt3);
+        // console.log(txt1.concat(" ", "Choi", " ", txt1 + " " + txt2)); // txt1에 txt2 연결
+        
+        // var str10 = "        Hello                 World!            ";
+        // console.log(str10);
+        // console.log(str10.trim());
+
+        // padStart(n1, n2) : (n1 : 자릿수, n2 : 빈 공간에 찍을 값)
+        // var str11 = "15";
+        // console.log(str11.padStart(4, 0));
+        
+        // var str12 = "3";
+        // var str13 = "13";
+        // console.log(str12.padStart(2, 0));
+        // console.log(str13.padStart(2, 0));
+
+        // 앞을 특정한 값을 넣고 뒤를 0으로 채움
+        // console.log(str13.padEnd(4, 0));
+
+        // charAt(n) : n번에 위치하는 값이 나옴
+        // var str14 = "Hello World!!";
+        // var str14 = "123456-1234567";
+        // console.log(str14.charAt(7));
+
+        // split
+        var tags = "키보드,기계식, 블루투스";
+        var arr1 = tags.split(","); // 기본값 : 공백
+        console.log(arr1);
+
+        var birthday = "2006-07-13";
+        var arr2 = birthday.split("-");
+        console.log(arr2);
+
     </script>
 </body>
 </html>
