@@ -1,0 +1,56 @@
+<html>
+    <head>
+    <title>홀수</title>
+    <!--
+    문제 : 7개의 자연수가 주어질 때, 이들 중 홀수인 자연수들만 모두 골라 그 합을 구하고, 고른 홀수들중에서 최소값을 찾는 프로그램을 작성하시오.
+    예를 들어 7개의 자연수 12, 77, 38, 41, 53, 92, 85가 주어지면 이들 중 홀수는 77, 41, 53, 85 이므로 그 합은 77 + 41 + 53 + 85 = 256이고,
+    이들 홀수 중 최소값은 41이 된다.
+
+    입력 : 자연수 7개가 주어진다. 주어지는 자연수는 100보다 작으며, 홀수가 한 개 이상 반드시 존재한다.
+    출력 : 첫번째 줄에 홀수들의 합과 최소값을 출력한다.
+
+    입력예시 : 12 77 38 41 53 92 85
+    출력예시 : 256 41
+
+    -->
+</head>
+<body>
+    <script>
+        function solution() {
+            let answer;
+
+            // insert Code
+            let sum = 0, min = Number.MAX_SAFE_INTEGER;
+            for(let i=0; i<arr.length; i++) {
+                if(arr[i]%2 != 0) {
+                    sum += arr[i];
+                    if(arr[i] < min) min = arr[i];
+                }
+            }
+
+            answer = sum + " " + min;
+            return answer;
+
+            /* 규정t 풀이
+            let answer = [];
+            let sum = 0, min = Number.MAX_SAFE_INTEGER;
+            for(let x of arr) {
+                if(x%2 == 1) {
+                    sum += x;
+                    if(x<min) min = x;
+                }
+            } // for
+
+            answer.push(sum);
+            answer.push(min);
+            
+            return answer;
+
+            */
+
+        } // function
+        arr = [12, 77, 38, 41, 53, 92, 85];
+        console.log(solution(arr));
+    </script>
+</body>
+</html>
