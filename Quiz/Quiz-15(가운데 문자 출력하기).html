@@ -16,14 +16,22 @@
 <body>
     <script>
         function solution(s) {
-            let answer;
+            let answer = "";
 
             // insert Code
-            for(let x of s) {
-                if(s.length % 2 !== 0) {
-                }
-            }
+            // 방법1 : substring 사용
+            // let mid = Math.floor(s.length/2); // floot : 내림
+            // if(s.length % 2 === 1)
+            //     answer = s.substring(mid, mid+1); // index, index-1
+            // else
+            //     answer = s.substring(mid-1, mid+1);
 
+            // 방법2 : substr 사용
+            let mid = Math.floor(s.length/2); // floot : 내림
+            if(s.length % 2 === 1)
+                answer = s.substr(mid, 1); // index, index-1
+            else
+                answer = s.substr(mid-1, 2);
             return answer;
 
         } // function
@@ -31,6 +39,10 @@
         console.log(solution("teacher")); // c
         console.log(solution("good")); // oo
         console.log(solution("length")); // ng
+
+        /* substring, substr 차이
+        ex) study
+        substring(2, 4) === substr(2, 2) => ud */
     </script>
 </body>
 </html>

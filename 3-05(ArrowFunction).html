@@ -1,0 +1,51 @@
+<html>
+    <head>
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+
+        // hello1(); // error 발생 X, why? 함수 선언
+        // function hello1() {
+        //     console.log("Hello World");
+        //     return "Welcome";
+        // }
+        // hello1(); // 일반적 호출 방식
+
+        // hello2(); // error 발생, why? 변수 선언
+        // var hello2 = function(){
+        //     console.log("Hello World");
+        //     return "Welcome";
+        // }
+        // hello2();
+
+        // arrow function
+        // var hello3 = () => {
+        //     console.log("Hello World");
+        //     return "Welcome";
+        // }
+        // hello3();
+
+        // var hello4 = () => "Welcome";
+        // console.log(hello4()); // Welcome
+
+        // function hello5(fullName) {
+        //     return "Welcome" + " " + fullName;
+        // }
+        // console.log(hello5("홍길동"));
+
+        // hello5를 arrow function으로 변환
+        // var hello5 = (fullName) =>  "Welcome" + " " + fullName;
+        // console.log(hello5("홍길동"));
+
+        // var hello5 = (firstName, lastName) =>  "Welcome" + " " + firstName + " " + lastName;
+        // console.log(hello5("홍", "길동"));
+
+        // 매개변수가 하나일 경우에는 () 생략 가능
+        var hello5 = fullName =>  "Welcome" + " " + fullName;
+        console.log(hello5("홍길동"));
+
+
+    </script>
+</body>
+</html>
