@@ -1,0 +1,30 @@
+<html>
+    <head>
+    <title>Spread Operator</title>
+</head>
+<body>
+    <script>
+        
+        // Spread Operator : 분해 기능
+        // var arr1 = [4, 5, 6];
+        // var arr2 = [1, 2, 3];
+        // var arr3 = arr1.concat(arr2); // 배열 합치기, concat 중간 합치기 X
+        // console.log(arr3); // 4, 5, 6, 1, 2, 3
+
+        // var arr4 = [4, 5, 6];
+        // // var arr5 = [1, 2, 3,...arr4]; // arr4 배열을 분해해서 넣기 arr4[0], arr4[1] ....
+        // var arr5 = [1, 2,...arr4,3];
+        // console.log(arr5); // 1, 2, 4, 5, 6, 3
+
+        // var arr7 = [4, 5, 6];
+        // var arr8 = [1, 2, 3];
+        // var arr9 = [23, ...arr8, 47, ...arr7, 55];
+        // console.log(arr9); // 23, 1, 2, 3, 47, 4, 5, 6, 55
+
+        var cd = "CD"; // string
+        var alphabet = ["A", "B", ...cd];
+        console.log(alphabet); // A, B, C, D
+
+    </script>
+</body>
+</html>
