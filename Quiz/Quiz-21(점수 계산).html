@@ -1,0 +1,41 @@
+<html>
+    <head>
+    <title></title>
+    <!--
+    문제 : 여러 개의 OX 문제에서 한 문제를 맞힐 경우에는 1점을 부여하고, 연속적으로 맞히는 경우에는 가산점을 부여하고자 한다.
+    즉 1번 문제가 맞는 경우에는 1점, 앞의 문제를 틀렸거나, 답이 맞는 처음 문제는 1점을 계산한다.
+    또한 연속적으로 답이 맞는 경우에는 두 문제는 2점, 세 문제는 3점, .... n번째 문제는 n점을 부여한다.
+    틀린 문제는 0점으로 계산한다.
+
+    입력 :
+    - N개 문제의 채점 결과를 나타내는 0 또는 1이 빈칸을 두고 사이에 주어진다.
+    - 
+    출력 :
+    -
+    - 
+
+    입력예시1 : 1 0 1 1 1 0 0 1 1 0
+    출력예시1 : 10
+    -->
+    </head>
+<body>
+    <script>
+        function solution(arr) {
+            let answer = 0, cnt = 0;
+
+            // insert Code
+            for(let x of arr) {
+                if(x === 1) {
+                    cnt++;
+                    answer += cnt;
+                }
+                else cnt = 0;
+            }
+            return answer;
+
+        } // function
+        let arr = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0]
+        console.log(solution(arr));
+    </script>
+</body>
+</html>
