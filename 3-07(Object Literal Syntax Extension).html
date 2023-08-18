@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Object Literal Syntax Extension</title>
+</head>
+<body>
+    <script>
+        // var firstName = "길동";
+        // var lastName = "홍";
+        
+        // //object
+        // var person = {
+        //     firstName : "길동",
+        //     lastName : "홍"
+        // }
+
+        // var person = {
+        //     firstName :  firstName, // key 값 : value 값
+        //     lastName : lastName
+        // }
+        // console.log(person);
+
+        //Object Literal Syntax Extension
+        var type1 = "student";
+        var score = {
+            [type1] : "홍길동",
+            score : 95
+        } 
+        console.log(score.student);
+
+        // //grade 추가
+        // score.grade = 1;
+        // console.log(score);
+        // console.log(score.grade);
+
+        //score 오브젝트에 key와 value를 추가
+        var type2 = "grade";
+        score[type2] = 1; //type2라는 키에 value를 score 오브젝트에 key값으로 넣어라!
+        console.log(score);
+
+    </script>
+</body>
+</html>
