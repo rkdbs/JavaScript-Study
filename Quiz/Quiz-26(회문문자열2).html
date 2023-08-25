@@ -1,0 +1,32 @@
+<html>
+    <head>
+    <title>회문 문자열  2</title>
+    <!--
+    문제 : 앞에서 읽을 때나 뒤에서 읽을 때나 같은 문자열을 회문 문자열이라고 한다.
+    입력된 문자열이 회문 문자열이면 "YES", 회문 문자열이 아니면 "NO"를 출력하는 프로그램을 작성하시오.
+    (단, 회문을 검사할때 알파벳만 가지고 회문을 검사하며, 대소문자는 구분하지 않는다. 또한 알파벳 이외의 문자들은 무시한다.)
+
+    입력 : 헛 줄에 공백이 없는 문자열이 주어진다.
+    출력 : 회문 문자열인지를 판별하여 "YES" 또는 "NO"의 결과를 리턴한다.
+
+    입력예시 : found77, Time^$ study,, Yduts;;;;emit. 987Dnuof
+    출력예시 : YES
+    -->
+    </head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = "YES";
+            str = str.toLowerCase().replace(/[^a-z]/g, '');
+
+            // insert Code
+            if(str != str.split("").reverse().join("")) return answer = "NO";
+
+            return answer;
+
+        } // function
+        let str = "found77, Time^$ study,, Yduts;;;;emit. 987Dnuof";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
