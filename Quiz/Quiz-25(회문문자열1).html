@@ -1,0 +1,55 @@
+<html>
+    <head>
+    <title>회문 문자열 1</title>
+    <!--
+    문제 : 앞에서 읽을 때나 뒤에서 읽을 때나 같은 문자열을 회문 문자열이라고 한다.
+    입력된 문자열이 회문 문자열이면 "YES", 회문 문자열이 아니면 "NO"를 출력하는 프로그램을 작성하시오.
+    (단, 회문을 검사할때 대소문자는 구분하지 않는다.)
+
+    입력 : 헛 줄에 공백이 없는 문자열이 주어진다.
+    출력 : 회문 문자열인지를 판별하여 "YES" 또는 "NO"의 결과를 리턴한다.
+
+    입력예시 : gooG
+    출력예시 : YES
+    -->
+    </head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = "YES";
+            // let str2 = "";
+            str = str.toLowerCase();
+
+            // insert Code
+
+            // for(let i of str) {
+            //     str2 = i + str2;
+            // }
+            // for(let i=0; i<str.length/2; i++) {
+            //     str = str.toUpperCase();
+            //     str2 = str2.toUpperCase();
+            //     if(str !== str2) answer = "NO";
+            // }
+
+            // 규정t 코드
+
+            // 방법1 : index를 이용한 직접 비교방법
+            // let len = str.length;
+            // for(let i=0; i<Math.floor(len/2); i++) {
+            //     if(str[i] !== str[len-i-1]) return anwer = "NO";
+            // } // for
+
+            // 방법2 : reverser() 함수 이용
+            // console.log(str.split("").reverse().join("")); // string을 배열로 변환 -> 뒤집기 -> 배열을 string으로 변환
+            if(str != str.split("").reverse().join("")) return answer = "NO";
+
+            return answer;
+
+        } // function
+
+        let str = "gooG"; // YES
+        // let str = "Student"; // NO
+        console.log(solution(str));
+    </script>
+</body>
+</html>
