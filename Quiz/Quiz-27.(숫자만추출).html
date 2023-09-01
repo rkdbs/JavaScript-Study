@@ -1,0 +1,36 @@
+<html>
+    <head>
+    <title>숫자만 추출</title>
+    <!--
+    문제 : 문자와 숫자가 섞여있는 문자열이 주어지면, 그 중 숫자(=숫자형문자)만 추출하여, 그 순서대로 자연수를 만들어 출력하시오.
+    만약, "tge0a1h205er"의 문자열이 주어지면, 여기서 0, 1, 2, 0, 5를 추출하고, 최종적으로 1205를 출력한다.
+
+    입력 : 첫 줄에 문자와 숫자가 섞여있는 문자열이 주어진다.
+    출력 : 자연수를 출력한다.
+
+    입력예시 : g0en2T0s8eSoft
+    출력예시 : 208
+    -->
+    </head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = 0;
+
+            // insert Code
+
+            // 방법1 : 정규 표현식
+            str = str.replace(/[^12345678910]/g, '');
+            for(let i=0; i<str.length; i++) {
+                answer = parseInt(str);
+            }
+
+            return answer;
+
+        } // function
+        let str = "g0en2T0s8eSoft";
+        // let str = "tge0a1h205er";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
