@@ -18,14 +18,27 @@
             let answer = 0;
 
             // insert Code
+            // str = str.replace(/[^12345678910]/g, '');
+            // for(let i=0; i<str.length; i++) {
+            //     answer = parseInt(str);
+            // }
+            // return answer;
 
-            // 방법1 : 정규 표현식
-            str = str.replace(/[^12345678910]/g, '');
-            for(let i=0; i<str.length; i++) {
-                answer = parseInt(str);
-            }
+            // 규정t 풀이
+            // 방법1 : parseInt() 사용
+            // for(let x of str) {
+            //     if(!isNaN(x)) answer += x;
+            // } // for
+            // return parseInt(answer);
 
-            return answer;
+            // 방법2 : parseInt() 함수 사용 금지, 수학식 도출
+            // for(let x of str) {
+            //     if(!isNaN(x)) answer = answer * 10 + Number(x);
+            // }
+            // return answer;
+
+            // 방법3 : 정규표현식 사용
+            return Number(str.replace(/[^0-9]/g, ''));
 
         } // function
         let str = "g0en2T0s8eSoft";
