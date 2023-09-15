@@ -6,6 +6,7 @@
     <script>
 
         // 시험 & 수행평가
+        // https://www.w3schools.com/ (참고사이트)
 
         // var patt = /World/i;    // World : 패턴, i : modifier
         // var str1 = "Hello World!";
@@ -63,9 +64,31 @@
         // console.log(str10.match(patt8)); // 'L', 'Loo'
 
         // n? : n이 zero or one
-        var str11 = "1, 100 or 1000";
-        var patt9 = /10?/g;
-        console.log(str11.match(patt9)); // '1', '10', '10'
+        // var str11 = "1, 100 or 1000";
+        // var patt9 = /10?/g;
+        // console.log(str11.match(patt9)); // '1', '10', '10'
+
+        // 우편번호 : 5자리
+        // 12345 : 5자리 다 숫자
+        // var patt10 = /\d{5}/; // 5자리 연속된 숫자가 나오면 true 출력
+        // var postalCode = "12345";
+        // var postalCode = "1234567"; // false가 나와야 하는데 true가 나옴
+        // console.log(patt10.test(postalCode));
+
+        // var patt11 = /^\d{5}$/; // ^ : ^다음에는 반드시 숫자로 시작해야함
+        // // var postalCode = "12345";
+        // var postalCode = "P1234567"; // false
+        // console.log(patt11.test(postalCode));
+
+        // 핸드폰 번호 : 010-1234-5678
+        // var patt12 = /^(010)-\d{4}-\d{4}$/;
+        // var tel = "010-1234-56578";
+        // var tel = "019-1234-56578"; // false
+        // console.log(patt12.test(tel));
+
+        // 이메일 주소 : grgyujungchoi#email.com
+        var patt13 = /^\w+([\.-]?\w+)*@\w+(\.\w{2, 3})+$/;
+        console.log(patt13.test("gtgyujungchoi@gmail.com"));
 
     </script>
 </body>
