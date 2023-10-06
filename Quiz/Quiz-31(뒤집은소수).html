@@ -1,0 +1,54 @@
+<html>
+    <head>
+    <title>뒤집은 소수</title>
+    <!--
+    문제 : N개의 자연수가 입력되면 각 자연수를 뒤집은 후 그 뒤집은 수가 소수이면, 그 숫자를 출력하는 프로그램을 작성하시오.
+    (예를 들어 32를 뒤집으면 23이고, 23은 소수이므로 출력한다. 반면 420을 뒤집으면 24이고, 24는 소수가 아니므로 출력하지 않는다. 첫 자리부터 연속된 0은 무시한다.)
+
+    입력 : 첫 줄에 N개의 자연수가 주어진다.
+    출력 : 뒤집은 소수를 출력한다. 출력 순서는 입력된 순서대로 출력할 것!
+
+    입력예시1 : 32 55 62 20 250 370 200 30 100
+    출력예시1 : 23 2 73 2 3
+    -->
+    </head>
+<body>
+    <script>
+        // 사용자 정의 함수
+        function isPrime(num) {
+            if(num === 1) return false;
+            for(let i=2; i<num; i++) {
+                if(num%i === 0) return false;
+            }
+            return true
+        }
+
+        function solution(arr) {
+            let answer = [];
+
+            // 방법1: while문 이용
+            // for(let x of arr) {
+            //     let res = 0;
+            //     while(x) {
+            //         let t = x % 10;
+            //         res = res * 10 + t;
+            //         x = parseInt(x / 10);
+            //     }
+                
+            //     if(isPrime(res)) answer.push(res);
+            // }
+
+            // 방법2: 내장함수 이용
+            for(let x of arr) {
+               let res = Number(x.toString().split("").reverse().join(""));
+               if(isPrime(res)) answer.push(res);
+            }
+
+            return answer;
+
+        } // function
+        let arr = [32, 55, 62, 20, 250, 370, 200, 30, 100];
+        console.log(solution(arr));
+    </script>
+</body>
+</html>
